@@ -1,0 +1,9 @@
+{
+  "degree_draft": {
+    "needs": "DEGREE,DEGREELEVEL",
+    "mapping": {
+      "degree": "$..DEGREE.degree",
+      "degreeLevel": "$..DEGREE.degreeCode"
+    }
+  }
+}

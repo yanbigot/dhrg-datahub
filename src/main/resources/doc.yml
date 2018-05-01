@@ -1,0 +1,12 @@
+source:
+  A(x,y)
+    B(y,z)
+      C(z,a)
+  ---------
+  Draft needs:
+    - sourceKey
+    - sourceElement
+    - sourceName
+    - attributeName
+    (key, name, value, dataMap)
+

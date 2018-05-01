@@ -1,0 +1,2 @@
+{"entity":"degree_draft","needs":"DEGREE,DEGREELEVEL","mapping":["degree=$..DEGREE.degree","degreeLevel=$..DEGREE.degreeCode"]}
+{"entity":"person_draft","needs":"IDENTIFICATION,JOBSTATUS","mapping":["name=$..IDENTIFICATION.name","jobStatus=$..DEGREE.jobStatus"]}
