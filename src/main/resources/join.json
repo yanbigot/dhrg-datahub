@@ -1,0 +1,28 @@
+[
+  {
+    "draft": "learning",
+    "leftTable": "training",
+    "leftKey": null,
+    "rightTable": null,
+    "rightKey": null,
+    "composition": [
+      {
+        "draft": "learning",
+        "leftTable": "training",
+        "leftKey": "trainingObjectId",
+        "rightTable": "session",
+        "rightKey": "trainingFk",
+        "composition": [
+          {
+            "draft": "learning",
+            "leftTable": "session",
+            "leftKey": "sessionObjectId",
+            "rightTable": "price",
+            "rightKey": "sessionFk",
+            "composition": []
+          }
+        ]
+      }
+    ]
+  }
+]

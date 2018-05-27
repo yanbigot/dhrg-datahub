@@ -1,0 +1,8 @@
+{
+  "formation": "learningName",
+  "formationId": "trainingObjectId",
+  "sessionId": "sessionObjectId",
+  "nomSession": "sessionName",
+  "prixCatalogueId": "priceObjectId",
+  "prix": "priceAmount"
+}
