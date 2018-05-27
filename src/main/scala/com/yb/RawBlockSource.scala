@@ -2,7 +2,6 @@ package com.yb
 
 import java.util.Date
 
-import com.yb.generator.TrainingGenerator
 import net.liftweb.json.JObject
 import org.apache.spark.sql.functions._
 //import org.apache.spark.sql.functions._
@@ -17,7 +16,6 @@ object RawBlockSource {
   val trainingFile = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\src\\main\\resources\\trainingCamel.json"
   val trainingBaseFile = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\src\\main\\resources\\trainingBaseCamel.json"
   val trainingNestedFile = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\trainings-merged.json"
-//  val trainingNestedFile = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\src\\main\\resources\\training-nested.json"
   val joinConfPath = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\src\\main\\resources\\join.json"
   val learningDraftConf = "D:\\NIFI_WORKSPACE\\dhrg-datahub\\src\\main\\resources\\learning-draft.json"
   val date = new Date().getTime
@@ -57,9 +55,12 @@ object RawBlockSource {
     */
   def main( args: Array[String] ): Unit = {
 //    TrainingGenerator.process(10)
-    TrainingGenerator.process(1000000)
+    val start = System.nanoTime()
+//    TrainingGenerator.process(1000000)
     ss.sparkContext.setLogLevel("WARN")
     process
+    val end = System.nanoTime()
+    println("duration "+ ((end - start)/ 1000000000.0))
   }
 
   def ss = {
