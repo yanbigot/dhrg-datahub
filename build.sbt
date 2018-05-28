@@ -9,10 +9,10 @@ dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.
 dependencyOverrides += "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.8.7"
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.10
-libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "2.2.0"
+libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "2.3.0"
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.10
-libraryDependencies += "org.apache.spark" % "spark-sql_2.11" % "2.2.0"
+libraryDependencies += "org.apache.spark" % "spark-sql_2.11" % "2.3.0"
 
 // https://mvnrepository.com/artifact/org.scalatest/scalatest_2.11
 libraryDependencies += "org.scalatest" % "scalatest_2.11" % "3.0.4" % Test
@@ -32,5 +32,12 @@ libraryDependencies += "com.josephpconley" %% "play-jsonpath" % "2.6.0"
 // https://mvnrepository.com/artifact/net.liftweb/lift-json
 libraryDependencies += "net.liftweb" %% "lift-json" % "3.0"
 
+// https://mvnrepository.com/artifact/org.json4s/json4s-native
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.5.3"
+
+// https://mvnrepository.com/artifact/com.bazaarvoice.jolt/jolt-core
+libraryDependencies += "com.bazaarvoice.jolt" % "jolt-core" % "0.1.1"
+// https://mvnrepository.com/artifact/com.bazaarvoice.jolt/json-utils
+libraryDependencies += "com.bazaarvoice.jolt" %% "json-utils" % "0.1.1"
 
 testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/test-html-reports")

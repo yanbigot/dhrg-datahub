@@ -9,7 +9,7 @@ import scala.io.Source
 
 object TrainingGenerator {
   implicit val formats = DefaultFormats
-  var MAX = 10
+  var MAX = 2000000
   val MOD_SESSION = 2
   val MOD_PRICE = 3
   case class Training( endPoint: String = "training", trainingObjectId: String, learningName: String )
@@ -46,9 +46,6 @@ object TrainingGenerator {
     val lastTraining = lastTurn(MAX, 1)
     val lastSession = lastTurn(MAX, MOD_SESSION)
     val lastPrice = lastTurn(MAX, MOD_PRICE)
-//    println("MAX: "+MAX+" >> lastTraining: " + lastTraining)
-//    println("MAX: "+MAX+" >> lastSession : " + lastSession)
-//    println("MAX: "+MAX+" >> lastPrice   : " + lastPrice)
 
     for (i <- 1 until MAX + 1) {
 

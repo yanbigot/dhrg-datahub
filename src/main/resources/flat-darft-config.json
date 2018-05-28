@@ -1,0 +1,18 @@
+[
+  {
+    "entity": "degree_draft",
+    "needs": "DEGREE,DEGREELEVEL",
+    "mapping": {
+      "degree": "DEGREE.degree",
+      "degreeLevel": "DEGREE.degreeCode"
+    }
+  },
+  {
+    "entity": "person_draft",
+    "needs": "IDENTIFICATION,JOBSTATUS",
+    "mapping": {
+      "degree": "IDENTIFICATION.name",
+      "degreeLevel": "DEGREE.jobStatus"
+    }
+  }
+]

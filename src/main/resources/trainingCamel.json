@@ -1,0 +1,9 @@
+{"endPoint":"training_base", "objectId":"tb_1", "learningName": "spark"}
+{"endPoint":"training_session", "sessionObjectId":"ts_1", "sessionName": "day_1", "trainFk":"tb_1"}
+{"endPoint":"training_session", "sessionObjectId":"ts_2", "sessionName": "day_2", "trainFk":"tb_1"}
+{"endPoint":"training_session", "sessionObjectId":"ts_3", "sessionName": "day_3", "trainFk":"tb_1"}
+{"endPoint":"training_price", "priceObjectId":"ps_1", "priceAmount": "100", "tSessionFk":"ts_1"}
+{"endPoint":"training_price", "priceObjectId":"ps_2", "priceAmount": "200", "tSessionFk":"ts_1"}
+{"endPoint":"training_price", "priceObjectId":"ps_3", "priceAmount": "300", "tSessionFk":"ts_1"}
+{"endPoint":"training_base", "objectId":"tb_2", "learningName": "nietzsche"}
+{"endPoint":"training_base", "objectId":"tb_3", "learningName": "mojito"}

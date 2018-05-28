@@ -1,7 +1,5 @@
 package com.yb.backend
 
-//import com.yb.backend.conf.ConfProxy._
-import com.yb.RawBlockSource.BlockLocation
 import com.yb.helper.FileHelper._
 import com.yb.backend.conf.ConfProxy._
 import org.apache.spark
@@ -12,9 +10,7 @@ object Block {
   def build(raw: DataFrame): Map[String, DataFrame] ={
     val blockConf = loadBlockConfigurationMock
     val blocks = createBlocksByFilter(raw, blockConf)
-
     saveBlocksAsParquet(blocks)
-
     val blocksLocation = retrieveParquetFileNameOnWindows(blocks)//because local, and parquet fileName is the directory, not the parquet file !
     val blockDfs = reloadBlocks(blocksLocation)
     blockDfs
