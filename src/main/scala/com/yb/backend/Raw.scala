@@ -1,7 +1,7 @@
 package com.yb.backend
 
-import org.apache.spark.sql.DataFrame
 import com.yb.backend.conf.ConfProxy._
+import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{explode, to_json}
 /**
   * Some file dependent pre-processings might be needed and not that generic
@@ -11,15 +11,20 @@ object Raw {
 
   def load(): DataFrame ={
     val file = loadWithGenericSchema
+    file.printSchema()
+    file.show()
     explodeThenJson(file)
   }
 
   /**
-    * Training file specific,
+    * Training file specific, perf optimisation, could be used
+    * without schema...
     * @return
     */
   private def loadWithGenericSchema: DataFrame = {
-    ss.read.schema(trainingGenericSchema).json(trainingFile)
+    ss.read
+      .schema(trainingGenericSchema)
+      .json(trainingFile)
   }
   private def explodeThenJson(nestedFile: DataFrame ): DataFrame = {
     import nestedFile.sparkSession.implicits._
